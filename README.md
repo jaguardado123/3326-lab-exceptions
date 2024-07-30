@@ -50,7 +50,9 @@ ArrayException obj = new ArrayException();
 System.out.print( obj.valueAt(0) ); // Should return 7.
 ```
 
-However, since `lab_array[]` is **private** the programmer using the `ArrayException` class does not know the array's range. Create a `try` and `catch` method inside `valueAt()` to prevent the program from crashing, if an out of bounds index is given.
+However, since `lab_array[]` is **private** the programmer using the `ArrayException` class does not know the array's range. Create a `try` and `catch` method inside `valueAt()` to prevent the program from crashing.
+
+If an out of bounds index is given, output an error message and `return 0`.
 
 **Test Your Code:**
 
