@@ -46,11 +46,14 @@ Create a **public** method `valueAt()` with a single parameter to return the val
 **Example:**
 
 ```java
-ArrayException obj = new ArrayException();
+ArrayException obj = new ArrayException(3);
+obj.insert(7);
 System.out.print( obj.valueAt(0) ); // Should return 7.
 ```
 
-However, since `lab_array[]` is **private** the programmer using the `ArrayException` class does not know the array's range. Create a `try` and `catch` method inside `valueAt()` to prevent the program from crashing.
+However, since `lab_array[]` is **private** the programmer using the `ArrayException` class does not always know the array's length. Create a `try` and `catch` method inside `valueAt()` to prevent the program from crashing.
+
+Include a `try` and `catch` method in `insert()` as well.
 
 If an out of bounds index is given, output an error message and `return 0`.
 
